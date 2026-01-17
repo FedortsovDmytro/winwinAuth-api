@@ -1,0 +1,18 @@
+package com.example.demo.controller;
+
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import java.util.Map;
+
+@RestController
+@RequestMapping("/api")
+public class ProcessController {
+
+    @PostMapping("/process")
+    public Map<String, String> process(@RequestBody Map<String, String> body) {
+        return Map.of("result", body.get("text").toUpperCase());
+    }
+}
