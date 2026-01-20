@@ -51,7 +51,6 @@ Content-Type: application/json
 
 
 Response:
-```json
 {
   "token": "JWT_TOKEN"
 }
